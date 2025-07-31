@@ -5,7 +5,7 @@ public class CanController : MonoBehaviour
     public int maxCan = 100;
     public int gecerliCan;
 
-
+    public int toplamPuan = 0;
     void Start()
     {
         gecerliCan = maxCan;
@@ -19,5 +19,10 @@ public class CanController : MonoBehaviour
             gecerliCan = 0;
             gameObject.SetActive(false); //görünürlüğünü kapatıyoruz
         }
+    }
+
+    public void PuanAl(int puanMiktari)
+    {
+        toplamPuan += puanMiktari;
     }
 }

@@ -22,4 +22,12 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = movement;
 
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            Debug.Log("Oyun Bitti");
+        }
+    }
 }
